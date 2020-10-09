@@ -16,8 +16,5 @@ Broadcast::channel('App.User.{id}', function ($user, $id) {
 });
 
 Broadcast::channel('switch', function ($user) {
-	// if ($user->role == 'admin') {
-	// 	return true;
-	// }
     return true;
 });

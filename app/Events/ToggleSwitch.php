@@ -19,11 +19,11 @@ class ToggleSwitch implements ShouldBroadcast
      *
      * @return void
      */
-    public $message;
+    public $state;
 
-    public function __construct($message)
+    public function __construct($state)
     {
-        $this->message = $message;
+        $this->state = $state;
     }
 
     /**

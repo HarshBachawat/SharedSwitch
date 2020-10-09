@@ -17,8 +17,8 @@ class AdminController extends Controller
 	}
 
 	public function switch(Request $request) {
-		$message = $request->input('message');
-		broadcast(new ToggleSwitch($message))->toOthers();
+		$state = $request->input('state');
+		broadcast(new ToggleSwitch($state))->toOthers();
 		return response([$request->all()],200);
 	}
 }

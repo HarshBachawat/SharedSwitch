@@ -11,6 +11,7 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require('bootstrap-switch');
 } catch (e) {}
 
 /**
@@ -39,5 +40,5 @@ window.Echo = new Echo({
     wsHost: window.location.hostname,
     wsPort: 6001,
     forceTLS: false,
-    disableStats: true,
+    disableStats: false,
 });
