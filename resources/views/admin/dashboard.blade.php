@@ -18,6 +18,8 @@
                     You are logged in!
                 </div>
             </div>
+            <br>
+            <example-component></example-component>
         </div>
     </div>
 </div>

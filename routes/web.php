@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin_dashboard','AdminController@index')->name('admin_dashboard');
 Route::get('/user_dashboard','UserController@index')->name('user_dashboard');
+Route::post('/admin_switch','AdminController@switch')->name('admin_switch');

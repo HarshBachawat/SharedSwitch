@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Events\ToggleSwitch;
 
 class AdminController extends Controller
 {
@@ -13,5 +14,11 @@ class AdminController extends Controller
   
   	public function index() {
 	    return view('admin.dashboard');
+	}
+
+	public function switch(Request $request) {
+		$message = $request->input('message');
+		broadcast(new ToggleSwitch($message))->toOthers();
+		return response([$request->all()],200);
 	}
 }
