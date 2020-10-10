@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<switch-screen></switch-screen>
+<switch-screen :switch-state="{{$state}}"></switch-screen>
 {{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

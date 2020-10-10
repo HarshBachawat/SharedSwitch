@@ -1962,6 +1962,13 @@ __webpack_require__.r(__webpack_exports__);
 
       _this.handleSubmit(state);
     });
+    var temp = this.$attrs['switch-state'];
+    console.log('temp', temp);
+
+    if (temp != null) {
+      $("#switch").bootstrapSwitch('state', parseInt(temp.state));
+    }
+
     window.Echo["private"]('switch').listen('.ToggleSwitch', function (event) {
       console.log('event', event);
       $("#switch").bootstrapSwitch('state', event.state);

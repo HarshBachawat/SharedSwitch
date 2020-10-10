@@ -36,6 +36,11 @@
                 }
                 this.handleSubmit(state);
             });
+            var temp = this.$attrs['switch-state'];
+            console.log('temp',temp)
+            if (temp != null) {
+                $("#switch").bootstrapSwitch('state', parseInt(temp.state));
+            }
             window.Echo.private('switch')
                 .listen('.ToggleSwitch', (event) => {
                     console.log('event',event);

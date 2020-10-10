@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\Switchstate;
+use App\User;
 
 class UserController extends Controller
 {
@@ -12,6 +15,7 @@ class UserController extends Controller
     }
 
 	public function index() {
-		return view('user.dashboard');
+		$state = Switchstate::orderBy('created_at','desc')->first();
+		return view('user.dashboard',compact('state'));
 	}
 }
